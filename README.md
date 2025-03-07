@@ -3,6 +3,14 @@
 
 Today we're going to learn how to build a basic HTML website.
 
+## Setup
+
+1. Go to [Trinket](https://trinket.io/) and log in/sign up.
+[Trinket Homepage](./images/trinket1.png)
+2. Click on the `+` button on the top left and select `New Project`.
+[Trinket New Project](./images/trinket2.png)
+3. Select `HTML` and name your project `hello-world`.
+
 ## What is HTML?
 
 HTML, which stands for Hypertext Markup Language, helps to organize and categorize content on a website. HTML is made up of elements, which are represented by tags. Tags tell the browser how to display the content on the page. Tags also can have attributes, which are used to provide additional information about the element.
@@ -18,13 +26,7 @@ Sectioning tags help us create the larger structure of our website by dividing o
 
 ## Simple HTML Structure
 
-Start by creating an index.html file in this directory. 
-
-If you're doing this in Github Codespaces or VS Code, you can create a new file by clicking the `+` button on the left sidebar and selecting `New file`.
-![Github Codespaces New File](./images/vscode-new-text-file.png)
-
-If you're doing this in Trinket, you can create a new file by clicking the `+` button on the left sidebar and selecting `New file`.
-![Trinket New File](./images/trinket-new-text-file.png)
+You should already have an index.html file created in your Trinket project. If you don't, you can create a new file by clicking the `+` button on the left sidebar and selecting `New file`. Then name it `index.html`.
 
 1. Add the doctype declaration: `<!DOCTYPE html>`
     - This tells the browser that this is an HTML document.
@@ -52,20 +54,20 @@ If you're doing this in Trinket, you can create a new file by clicking the `+` b
 
 That should look like this:
 
-![HTML Structure](./images/demo1.png)
+![Hello World](./images/1demo.png)
 
 Congratulations! You've just created your first HTML document and said hello to the world! Now let's give your site a fun name.
 
 ## Adding a Title
 
-The `<title>` tag is used to specify the title of the HTML document. When you hover over the tab of the browser, you'll see the title of the page.
+The `<title>` tag is used to specify the title of the HTML document. You won't be able to see this on the trinket but it will be used to identify the page when you share it with others.
 
 ```diff
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 +    <title>Drshika's Awesome Website!</title>
 </head>
 <body>
@@ -77,7 +79,7 @@ The `<title>` tag is used to specify the title of the HTML document. When you ho
 
 The website looks a bit plain right now. Let's add an external stylesheet to make it look a bit nicer.
 
-Add these two lines to the head tag. This will load the external stylesheet and font when the page loads.
+Copy and paste these two lines to the head tag. This will load the external stylesheet and font when the page loads.
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
 <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
@@ -110,7 +112,7 @@ Let's add our website title and give it a fun color.
 
 That should look like this:
 
-![Styling](./images/demo2.png)
+![Styling](./images/2demo.png)
 
 ## Adding Content
 
@@ -124,7 +126,7 @@ We can also start to add some information to our webpage. Let's start by adding 
 
 here is the code after adding fun facts and info:
 ```diff
-<body>
+`<body>
     <header>
         <h1>Drshika's Awesome Website!</h1>
     </header>
@@ -135,12 +137,12 @@ here is the code after adding fun facts and info:
 +        <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
 +        <li>My favorite sport is swimming</li>
 +    </ul>
-</body>
+</body>`
 ```
 
 That should look like this:
 
-![Content](./images/demo3.png)
+![Content](./images/3demo.png)
 
 ## Adding Images
 
@@ -152,7 +154,7 @@ The `<img>` tag is used to embed an image in an HTML document. Let's add an imag
 
 That should look like this:
 
-![Images](./images/demo4.png)  
+![Images](./images/4demo.png)  
 
 ## Adding another Page
 
@@ -168,28 +170,32 @@ To add another page to our website, we need to create a new HTML file. Let's cre
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
-    <h1>Projects</h1>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-    </nav>
-</body>
-</html>
-```
-
-![Project Page](./images/demo5.png)
-Now let's add a link in the navigation bar to the projects page from the index.html page.
-
-```html
-<body>
     <header>
-        <h1>Drshika's Awesome Website!</h1>
+    <h1>Projects</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
         </nav>
+    </header>
+</body>
+</html>
+```
+
+![Project Page](./images/5demo.png)
+Now let's add a link in the navigation bar to the projects page from the index.html page.
+
+```diff
+<body>
+    <header>
+        <h1>Drshika's Awesome Website!</h1>
++        <nav>
++            <a href="index.html">Home</a>
++            <a href="projects.html">Projects</a>
++        </nav>
     </header>
     <!-- Everything else stays the same -->
 </body>
@@ -197,7 +203,7 @@ Now let's add a link in the navigation bar to the projects page from the index.h
 
 That should look like this:
 
-![New Page](./images/demo6.png)
+![New Page](./images/6demo.png)
 
 ## HTML Element: Tables
 
@@ -225,7 +231,7 @@ The `<table>` tag is used to create a table. Let's add a table to our webpage to
 
 That should look like this:
 
-![HTML Structure](./images/demo7.png)
+![HTML Structure](./images/7demo.png)
 
 ## [BONUS] Adding a Button
 
@@ -241,7 +247,20 @@ HTML websites are static, meaning they don't have any interactivity. If we want 
 
 That should look like this:
 
+![HTML Structure in Trinket](./images/8demo.png)
+
+And here's a video of the button in action!
 ![HTML Structure](./images/Untitled.gif)
+
+## Conclusion
+
+You've just built your first HTML website! You can keep adding more and more elements to your website to make it more and more interesting. Here are some ideas:
+
+- Add a form
+- Add a video
+- Change the styling (fonts, colors, background, etc.)
+
+Hope you had fun! See you next time!
 
 ## Acknowledgements
 
