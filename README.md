@@ -152,7 +152,7 @@ here is the code after adding fun facts and info:
 </head>
 <body>
     <header>
-        <h1>Drshika's Awesome Website!</h1>
+        <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
     </header>
     <main>
         <p>I'm currently a <em>17th grader</em> at the <a href="https://www.bklynlibrary.org/">Brooklyn Public Library's</a> Girls Who Code Club.</p>
@@ -193,7 +193,7 @@ And here's our code so far:
 </head>
 <body>
     <header>
-        <h1>Drshika's Awesome Website!</h1>
+        <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
     </header>
     <main>
         <p>I'm currently a <em>17th grader</em> at the <a href="https://www.bklynlibrary.org/">Brooklyn Public Library's</a> Girls Who Code Club.</p>
@@ -256,7 +256,7 @@ Now let's add a link in the navigation bar to the projects page from the index.h
 </head>
 <body>
     <header>
-        <h1>Drshika's Awesome Website!</h1>
+        <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
         <!-- Add this navigation section -->
         <nav>
             <a href="index.html">Home</a>
@@ -353,7 +353,7 @@ HTML websites are static, meaning they don't have any interactivity. If we want 
 </head>
 <body>
     <header>
-        <h1>Drshika's Awesome Website!</h1>
+        <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
         <!-- Add this navigation section -->
         <nav>
             <a href="index.html">Home</a>
