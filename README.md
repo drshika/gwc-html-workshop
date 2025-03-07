@@ -379,7 +379,7 @@ That should look like this:
 
 ![HTML Structure in Trinket](./images/8demo.png)
 
-And here's a video of the button in action!
+And here's a video of the button in action!   
 ![HTML Structure](./images/Untitled.gif)
 
 ## Conclusion
