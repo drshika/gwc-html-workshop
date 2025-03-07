@@ -7,9 +7,10 @@ Today we're going to learn how to build a basic HTML website.
 
 1. Go to [Trinket](https://trinket.io/) and log in/sign up.
 ![Trinket Homepage](./images/trinket1.png)
-2. Click on the `+` button on the top left and select `New Project`.
+2. Navigate to the `home` page.
+3. Click on the `+` button on the top left and select `New Project`.
 ![Trinket New Project](./images/trinket2.png)
-3. Select `HTML` and name your project `hello_world`.
+4. Select `HTML` and name your project `hello_world`.
 
 ## What is HTML?
 
