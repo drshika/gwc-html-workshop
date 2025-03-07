@@ -50,7 +50,9 @@ You should already have an index.html file created in your Trinket project. If y
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    hello world
+    <main>
+        hello world
+    </main>
 </body>
 ```
 
@@ -64,16 +66,21 @@ Congratulations! You've just created your first HTML document and said hello to 
 
 The `<title>` tag is used to specify the title of the HTML document. You won't be able to see this on the trinket but it will be used to identify the page when you share it with others.
 
-```diff
+    ℹ️ I'll be using HTML comments <!-- --> to indicate what changes I'm making to the code moving forward. Each step will have the full code up till that step so if you get lost, you can always copy and paste the code from the previous step. 
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-+    <title>Drshika's Awesome Website!</title>
+    <!-- Add this title tag -->
+    <title>Drshika's Awesome Website!</title>
 </head>
 <body>
-    hello world
+    <main>
+        hello world
+    </main>
 </body>
 ```
 
@@ -94,22 +101,25 @@ Let's add our website title and give it a fun color.
     - The `style` attribute is used to specify the style of the element.
     - The `color` property is used to specify the color of the text.
 
-```diff
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drshika's Awesome Website!</title>   
-+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <!-- Add these new stylesheet links -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
--    hello world
-+    <header>
-+        <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
-+    </header>
+    <header>
+        <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
+    </header>
+    <main>
+    </main>
 </body>
+</html>
 ```
 
 That should look like this:
@@ -120,26 +130,41 @@ That should look like this:
 
 We can also start to add some information to our webpage. Let's start by adding our school name and and some fun facts about ourselves.
 
+- The `<main>` tag is used to create the main content of the webpage.
 - The `<p>` tag is used to create a paragraph of text.
 - The `<a>` tag is used to create a hyperlink.  
     - The `href` attribute is used to specify the URL of the page to link to.
 - The `<ul>` tag is used to create an unordered list.
 - The `<li>` tag is used to create a list item.
+- The `<em>` tag is used to create an italic text.
+- The `<strong>` tag is used to create a bold text.
 
 here is the code after adding fun facts and info:
-```diff
-`<body>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drshika's Awesome Website!</title>   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+</head>
+<body>
     <header>
         <h1>Drshika's Awesome Website!</h1>
     </header>
-+    <p>I'm currently a 17th grader at the <a href="https://www.bklynlibrary.org/">Brooklyn Public Library's</a> Girls Who Code Club.</p>
-+    <p>Some fun facts about me:</p>
-+    <ul>
-+        <li>I love to eat pesto pasta</li>
-+        <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
-+        <li>My favorite sport is swimming</li>
-+    </ul>
-</body>`
+    <main>
+        <p>I'm currently a <em>17th grader</em> at the <a href="https://www.bklynlibrary.org/">Brooklyn Public Library's</a> Girls Who Code Club.</p>
+        <p>Some <strong>fun</strong> facts about me:</p>
+        <ul>
+            <li>I love to eat pesto pasta</li>
+            <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
+            <li>My favorite sport is swimming</li>
+        </ul>
+    </main>
+</body>
+</html>
 ```
 
 That should look like this:
@@ -154,11 +179,39 @@ The `<img>` tag is used to embed an image in an HTML document. Let's add an imag
 <img src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg" alt="Three baby emperor penguin chicks.">
 ```
 
+And here's our code so far:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drshika's Awesome Website!</title>   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+</head>
+<body>
+    <header>
+        <h1>Drshika's Awesome Website!</h1>
+    </header>
+    <main>
+        <p>I'm currently a <em>17th grader</em> at the <a href="https://www.bklynlibrary.org/">Brooklyn Public Library's</a> Girls Who Code Club.</p>
+        <p>Some <strong>fun</strong> facts about me:</p>
+        <ul>
+            <li>I love to eat pesto pasta</li>
+            <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
+            <li>My favorite sport is swimming</li>
+        </ul>
+        <img src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg" alt="Three baby emperor penguin chicks.">
+    </main>
+</body>
+</html>
+```
+
 That should look like this:
 
-![Images](./images/4demo.png)  
-
-## Adding another Page
+![Images](./images/4demo.png)
 
 To add another page to our website, we need to create a new HTML file. Let's create a new file called `projects.html`. 
 
@@ -166,6 +219,7 @@ To add another page to our website, we need to create a new HTML file. Let's cre
     - make sure to add the same navigation bar to the new page as well so that we can navigate between the pages.
 
 ```html
+<!-- created the whole projects page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -177,7 +231,7 @@ To add another page to our website, we need to create a new HTML file. Let's cre
 </head>
 <body>
     <header>
-    <h1>Projects</h1>
+        <h1>Projects</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
@@ -190,17 +244,37 @@ To add another page to our website, we need to create a new HTML file. Let's cre
 ![Project Page](./images/5demo.png)
 Now let's add a link in the navigation bar to the projects page from the index.html page.
 
-```diff
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drshika's Awesome Website!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+</head>
 <body>
     <header>
         <h1>Drshika's Awesome Website!</h1>
-+        <nav>
-+            <a href="index.html">Home</a>
-+            <a href="projects.html">Projects</a>
-+        </nav>
+        <!-- Add this navigation section -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </nav>
     </header>
-    <!-- Everything else stays the same -->
+    <main>
+        <p>I'm currently a <em>17th grader</em> at the <a href="https://www.bklynlibrary.org/">Brooklyn Public Library's</a> Girls Who Code Club.</p>
+        <p>Some <strong>fun</strong> facts about me:</p>
+        <ul>
+            <li>I love to eat pesto pasta</li>
+            <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
+            <li>My favorite sport is swimming</li>
+        </ul>
+        <img src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg" alt="Three baby emperor penguin chicks.">
+    </main>
 </body>
+</html>
 ```
 
 That should look like this:
@@ -216,19 +290,41 @@ The `<table>` tag is used to create a table. Let's add a table to our webpage to
 - The `<td>` tag is used to create a table cell.
 
 ```html
-<table>
-    <tr>
-        <th>Project</th>    
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td>Girls Who Code Website</td>
-        <td>A website to showcase the projects we will build together!</td>
-    </tr>
-    <tr>
-        <td>Recipes Website</td>
-        <td>A collection of my favorite recipes!</td>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+</head>
+<body>
+    <header>
+        <h1>Projects</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+    <main>
+        <table>
+            <tr>
+                <th>Project</th>    
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Girls Who Code Website</td>
+                <td>A website to showcase the projects we will build together!</td>
+            </tr>
+            <tr>
+                <td>Recipes Website</td>
+                <td>A collection of my favorite recipes!</td>
+            </tr>
+        </table>
+    </main>
+</body>
+</html>
 ```
 
 That should look like this:
@@ -241,10 +337,42 @@ HTML websites are static, meaning they don't have any interactivity. If we want 
 
 - The `<button>` tag is used to create a button.
 - The `onclick` attribute is used to specify the JavaScript code to execute when the button is clicked.
+    1. `document.getElementById('animal').style.display='block'` is used to display the image when the button is clicked.
+    2. `display:none` is used to hide the image by default.
+    
 
 ```html
-<button onclick="document.getElementById('animal').style.display='block'">Click me for cute suprise!</button>
-<img id="animal" src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg" alt="Three baby emperor penguin chicks" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drshika's Awesome Website!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+</head>
+<body>
+    <header>
+        <h1>Drshika's Awesome Website!</h1>
+        <!-- Add this navigation section -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+    <main>
+        <p>I'm currently a <em>17th grader</em> at the <a href="https://www.bklynlibrary.org/">Brooklyn Public Library's</a> Girls Who Code Club.</p>
+        <p>Some <strong>fun</strong> facts about me:</p>
+        <ul>
+            <li>I love to eat pesto pasta</li>
+            <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
+            <li>My favorite sport is swimming</li>
+        </ul>
+        <button onclick="document.getElementById('animal').style.display='block'">Click me for cute suprise!</button>
+        <img id="animal" src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg" alt="Three baby emperor penguin chicks" style="display:none;">
+    </main>
+</body>
+</html>
 ```
 
 That should look like this:
