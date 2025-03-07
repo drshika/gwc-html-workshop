@@ -9,7 +9,7 @@ HTML, which stands for Hypertext Markup Language, helps to organize and categori
 
 ## How do you organize your content?
 
-Sectioning tags help us create the larger structure of our website by dividing our content into sections (sort of like a beginning, middle, and end). We can use these tags to group elements together based on where they live on the webpage.
+Sectioning tags help us create the larger structure of our website by dividing our content into sections (sort of like a beginning, middle, and end). We can use these tags to group elements together based on where they live on the webpage. All of the tags come in a **sandwich** so each opening tag should have a closing tag (but some of the tags self close, we will get to that later). 
 
 - The `<body>` tag holds the content of an HTML document. There can only be one `<body>` tag.
 - The `<nav>` tag holds the navigation bar in an HTML document.
@@ -60,13 +60,13 @@ Congratulations! You've just created your first HTML document and said hello to 
 
 The `<title>` tag is used to specify the title of the HTML document. When you hover over the tab of the browser, you'll see the title of the page.
 
-```html
+```diff
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drshika's Awesome Website!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">+
++    <title>Drshika's Awesome Website!</title>
 </head>
 <body>
     hello world
@@ -90,20 +90,21 @@ Let's add our website title and give it a fun color.
     - The `style` attribute is used to specify the style of the element.
     - The `color` property is used to specify the color of the text.
 
-```html
+```diff
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drshika's Awesome Website!</title>   
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
++    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
++    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
-    <header>
-        <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
-    </header>
+-    hello world
++    <header>
++        <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
++    </header>
 </body>
 ```
 
@@ -121,18 +122,19 @@ We can also start to add some information to our webpage. Let's start by adding 
 - The `<ul>` tag is used to create an unordered list.
 - The `<li>` tag is used to create a list item.
 
-```html
+here is the code after adding fun facts and info:
+```diff
 <body>
     <header>
         <h1>Drshika's Awesome Website!</h1>
     </header>
-    <p>I'm currently a 17th grader at the <a href="https://www.bklynlibrary.org/">Brooklyn Public Library's</a> Girls Who Code Club.</p>
-    <p>Some fun facts about me:</p>
-    <ul>
-        <li>I love to eat pesto pasta</li>
-        <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
-        <li>My favorite sport is swimming</li>
-    </ul>
++    <p>I'm currently a 17th grader at the <a href="https://www.bklynlibrary.org/">Brooklyn Public Library's</a> Girls Who Code Club.</p>
++    <p>Some fun facts about me:</p>
++    <ul>
++        <li>I love to eat pesto pasta</li>
++        <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
++        <li>My favorite sport is swimming</li>
++    </ul>
 </body>
 ```
 
