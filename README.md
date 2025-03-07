@@ -94,7 +94,7 @@ Copy and paste these two lines to the head tag. This will load the external styl
 <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 ```
 
-Let's add our website title and give it a fun color.
+Let's add our website title and give it a fun color. You can use a color picker to pick your favorite color: [w3 Schools Color Picker](https://www.w3schools.com/colors/colors_picker.asp)
 
 - The `<header>` tag is used to create a header for the webpage.
 - The `<h1>` tag is used to create a heading for the webpage.
@@ -113,6 +113,7 @@ Let's add our website title and give it a fun color.
     <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
+    <!-- deleted the hello world and added the header section and heading-->
     <header>
         <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
     </header>
