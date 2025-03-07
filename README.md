@@ -40,6 +40,7 @@ You should already have an index.html file created in your Trinket project. If y
     - The viewport attribute is used to specify the viewport of the document.
 5. Add the body tag: `<body>`
     - This is the container for the content of the HTML document.
+6. Add your hello world inside the `<body></body>` tags.
 
 ```html
 <!DOCTYPE html>
