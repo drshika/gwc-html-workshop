@@ -29,31 +29,22 @@ Sectioning tags help us create the larger structure of our website by dividing o
 
 You should already have an index.html file created in your Trinket project. If you don't, you can create a new file by clicking the `+` button on the left sidebar and selecting `New file`. Then name it `index.html`.
 
-1. Add the doctype declaration: `<!DOCTYPE html>`
-    - This tells the browser that this is an HTML document.
-2. Add the html tag: `<html lang="en">`
-    - This is the root element of the HTML document. It also sets the language of the document to English.
-3. Add the head tag: `<head>`
-    - This is the container for the metadata of the HTML document.
-4. Within the head tag, add the meta tag: `<meta charset="UTF-8">` and `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-    - The charset attribute is used to specify the character encoding of the document.
-    - The viewport attribute is used to specify the viewport of the document.
-5. Add the body tag: `<body>`
+1. Add the html tag: `<html>`
+    - This is the root element of the HTML document.    
+2. Add the body tag: `<body>`
     - This is the container for the content of the HTML document.
-6. Add your hello world inside the `<body></body>` tags.
+3. Add the main tag: `<main>`
+    - The main element is the unique core content of that specific page. You can only have one main element per page.
+4. Add your hello world inside the `<main></main>` tags.
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+<html>
 <body>
     <main>
         hello world
     </main>
 </body>
+</html>
 ```
 
 That should look like this:
@@ -62,37 +53,38 @@ That should look like this:
 
 Congratulations! You've just created your first HTML document and said hello to the world! Now let's give your site a fun name.
 
-## Adding a Title
-
-The `<title>` tag is used to specify the title of the HTML document. You won't be able to see this on the trinket but it will be used to identify the page when you share it with others.
-
-    ℹ️ I'll be using HTML comments <!-- --> to indicate what changes I'm making to the code moving forward. Each step will have the full code up till that step so if you get lost, you can always copy and paste the code from the previous step. 
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Add this title tag -->
-    <title>Drshika's Awesome Website!</title>
-</head>
-<body>
-    <main>
-        hello world
-    </main>
-</body>
-```
-
 ## Styling
 
 The website looks a bit plain right now. Let's add an external stylesheet to make it look a bit nicer.
 
-Copy and paste these two lines to the head tag. This will load the external stylesheet and font when the page loads.
+Copy and paste this line to the head tag. This will load the external stylesheet when the page loads.
 ```html
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-<link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 ```
+
+- The `<head>` tag is used to specify the metadata of the HTML document.
+- The `<link>` tag is used to link to an external stylesheet.
+    - The link tag is a self closing tag.
+- The `rel` attribute is used to specify the relationship between the current document and the linked resource.
+- The `href` attribute is used to specify the URL of the linked resource.
+
+And here's the code after adding the stylesheet:
+
+```html
+<html>
+    <!-- Add these new stylesheet links in the head tag -->
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    </head>
+    <body>
+        <main>
+            hello world
+        </main>
+    </body>
+</html>
+```
+
+## Adding a Title
 
 Let's add our website title and give it a fun color. You can use a color picker to pick your favorite color: [w3 Schools Color Picker](https://www.w3schools.com/colors/colors_picker.asp)
 
@@ -102,22 +94,17 @@ Let's add our website title and give it a fun color. You can use a color picker 
     - The `color` property is used to specify the color of the text.
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drshika's Awesome Website!</title>   
-    <!-- Add these new stylesheet links -->
+<html>
+<head> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
-    <!-- deleted the hello world and added the header section and heading-->
+    <!-- added the header section and heading-->
     <header>
         <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
     </header>
     <main>
+        hello world
     </main>
 </body>
 </html>
@@ -131,10 +118,9 @@ That should look like this:
 
 We can also start to add some information to our webpage. Let's start by adding our school name and and some fun facts about ourselves.
 
-- The `<main>` tag is used to create the main content of the webpage.
+
 - The `<p>` tag is used to create a paragraph of text.
 - The `<a>` tag is used to create a hyperlink.  
-    - The `href` attribute is used to specify the URL of the page to link to.
 - The `<ul>` tag is used to create an unordered list.
 - The `<li>` tag is used to create a list item.
 - The `<em>` tag is used to create an italic text.
@@ -142,25 +128,21 @@ We can also start to add some information to our webpage. Let's start by adding 
 
 here is the code after adding fun facts and info:
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drshika's Awesome Website!</title>   
+<html>
+<head>  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
     <header>
         <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
     </header>
     <main>
+        <!-- removed hello world, added the main section and the paragraphs -->
         <p>I'm currently a <em>17th grader</em> at the <a href="https://www.bklynlibrary.org/">Brooklyn Public Library's</a> Girls Who Code Club.</p>
         <p>Some <strong>fun</strong> facts about me:</p>
         <ul>
             <li>I love to eat pesto pasta</li>
-            <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
+            <li>My favorite TV show is <a href="https://www.imdb.com/title/tt4955642">The Good Place</a></li>
             <li>My favorite sport is swimming</li>
         </ul>
     </main>
@@ -174,23 +156,20 @@ That should look like this:
 
 ## Adding Images
 
-The `<img>` tag is used to embed an image in an HTML document. Let's add an image of our favorite animal to our webpage. Mine is a penguin. Make sure to add the `alt` attribute to the image. This information is important for people who use screen readers to navigate the web.
+The `<img>` tag is used to embed an image in an HTML document. Let's add an image of our favorite animal to our webpage. Mine is a penguin. 
 
 ```html 
-<img src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg" alt="Three baby emperor penguin chicks.">
+<img src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg">
 ```
+
+The image tag is a self closing tag.
 
 And here's our code so far:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drshika's Awesome Website!</title>   
+<html>
+<head>  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
     <header>
@@ -201,10 +180,11 @@ And here's our code so far:
         <p>Some <strong>fun</strong> facts about me:</p>
         <ul>
             <li>I love to eat pesto pasta</li>
-            <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
+            <li>My favorite TV show is <a href="https://www.imdb.com/title/tt4955642">The Good Place</a></li>
             <li>My favorite sport is swimming</li>
         </ul>
-        <img src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg" alt="Three baby emperor penguin chicks.">
+        <!-- added the image tag -->
+        <img src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg">
     </main>
 </body>
 </html>
@@ -214,51 +194,44 @@ That should look like this:
 
 ![Images](./images/4demo.png)
 
-To add another page to our website, we need to create a new HTML file. Let's create a new file called `projects.html`. 
+## Creating a new Page
 
-- The `<nav>` tag is used to create a navigation bar.
-    - make sure to add the same navigation bar to the new page as well so that we can navigate between the pages.
+To add another page to our website, we need to create a new HTML file. Let's create a new file called `projects.html`. Let's start by adding the basic HTML structure to the new page.
 
 ```html
-<!-- created the whole projects page -->
-<!DOCTYPE html>
-<html lang="en">
+<!-- created basic projects.html page -->
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
     <header>
         <h1>Projects</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-        </nav>
     </header>
+    <main>
+        <p>Here are some of the projects we will build together:</p>
+    </main>
 </body>
 </html>
 ```
 
-![Project Page](./images/5demo.png)
-Now let's add a link in the navigation bar to the projects page from the index.html page.
+That should look like this:
+
+![New Page](./images/5demo.png)
+
+## Navigating between pages
+
+To be able to navigate to the projects page, we need to add a link to the projects page from the *home* page. We can do this by adding the link within the `nav` tags in the `index.html` page. Within the `nav` tags, we can add a link to the projects page by using the `a` tag. I am also adding a link to the home page within the `nav` tags to stay consistent with the menu we will add to the `projects.html` page.
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drshika's Awesome Website!</title>
+<html>
+<head>  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
     <header>
         <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
-        <!-- Add this navigation section -->
+        <!-- added the navigation menu -->
         <nav>
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
@@ -269,10 +242,10 @@ Now let's add a link in the navigation bar to the projects page from the index.h
         <p>Some <strong>fun</strong> facts about me:</p>
         <ul>
             <li>I love to eat pesto pasta</li>
-            <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
+            <li>My favorite TV show is <a href="https://www.imdb.com/title/tt4955642">The Good Place</a></li>
             <li>My favorite sport is swimming</li>
         </ul>
-        <img src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg" alt="Three baby emperor penguin chicks.">
+        <img src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg">
     </main>
 </body>
 </html>
@@ -280,49 +253,37 @@ Now let's add a link in the navigation bar to the projects page from the index.h
 
 That should look like this:
 
-![New Page](./images/6demo.png)
+![Navigation](./images/6demo.png)
 
-## HTML Element: Tables
+## Creating an Ordered list
 
-The `<table>` tag is used to create a table. Let's add a table to our webpage to display some of the projects we will build together
+Going back to the *projects* page, let's create an ordered list of the projects we will build together. Ordered lists are simmilar to create as unordered lists but the HTML tag you have to use is different. Let's also add the navigation menu to the `projects.html` page to get back to the home page.
 
-- The `<tr>` tag is used to create a table row.
-- The `<th>` tag is used to create a table header.
-- The `<td>` tag is used to create a table cell.
+- The `<ol>` tag is used to create an ordered list.
+    - The `type` attribute is used to specify the type of list. I've chosen roman numerals for this list but you can choose from a variety of other types like `1`, `A`, `a`, `I`, `i`.
+- The `<li>` tag is used to create a list item.
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
     <header>
         <h1>Projects</h1>
+        <!-- added the navigation menu -->
         <nav>
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
         </nav>
     </header>
     <main>
-        <table>
-            <tr>
-                <th>Project</th>    
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>Girls Who Code Website</td>
-                <td>A website to showcase the projects we will build together!</td>
-            </tr>
-            <tr>
-                <td>Recipes Website</td>
-                <td>A collection of my favorite recipes!</td>
-            </tr>
-        </table>
+        <p>Here are some of the projects we will build together:</p>
+        <!-- added the ordered list of projects -->
+        <ol type="I">
+            <li>Girls Who Code Website</li>
+            <li>Recipes Website</li>
+        </ol>
     </main>
 </body>
 </html>
@@ -330,32 +291,25 @@ The `<table>` tag is used to create a table. Let's add a table to our webpage to
 
 That should look like this:
 
-![HTML Structure](./images/7demo.png)
+![Ordered List](./images/7demo.png)
 
-## [BONUS] Adding a Button
+## [BONUS] Interactive Elements
 
-HTML websites are static, meaning they don't have any interactivity. If we want the users to be able to interact with our website, we can use JavaScript. Let's make the cute animal picture a suprise when the user clicks on the button.
+There are many ways to make your website interactive. HTML elements like `button`, `input`, and `select` (dropdowns) are some examples but all require some JavaScript to make them useful. 
 
-- The `<button>` tag is used to create a button.
-- The `onclick` attribute is used to specify the JavaScript code to execute when the button is clicked.
-    1. `document.getElementById('animal').style.display='block'` is used to display the image when the button is clicked.
-    2. `display:none` is used to hide the image by default.
-    
+For the scope of this workshop, we will use the `details` and `summary` tags to create an interactive element. Let's put our animal image into a suprise component that will show when the user clicks clicks to access the summary. 
+
+- The `<details>` tag is used to create a details element.
+- The `<summary>` tag is used to create a summary element.
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drshika's Awesome Website!</title>
+<html>
+<head>  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
-    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
 </head>
 <body>
     <header>
         <h1 style="color: #008B8B;">Drshika's Awesome Website!</h1>
-        <!-- Add this navigation section -->
         <nav>
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
@@ -366,11 +320,14 @@ HTML websites are static, meaning they don't have any interactivity. If we want 
         <p>Some <strong>fun</strong> facts about me:</p>
         <ul>
             <li>I love to eat pesto pasta</li>
-            <li>My favorite TV show is <a href="https://www.apple.com/tv-plus/series/severance/">Severance</a></li>
+            <li>My favorite TV show is <a href="https://www.imdb.com/title/tt4955642">The Good Place</a></li>
             <li>My favorite sport is swimming</li>
         </ul>
-        <button onclick="document.getElementById('animal').style.display='block'">Click me for cute suprise!</button>
-        <img id="animal" src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg" alt="Three baby emperor penguin chicks" style="display:none;">
+        <!-- put the image tag inside the details tag under the summary tag -->
+        <details>
+            <summary>Click me for a cute suprise!</summary>
+            <img src="https://www.pewtrusts.org/-/media/post-launch-images/2022/11/gettyimages1198849037jpgmaster/16x9_m.jpg">
+        </details>
     </main>
 </body>
 </html>
@@ -378,18 +335,19 @@ HTML websites are static, meaning they don't have any interactivity. If we want 
 
 That should look like this:
 
-![HTML Structure in Trinket](./images/8demo.png)
+![Interactive](./images/8demo.png)
 
-And here's a video of the button in action!   
-![HTML Structure](./images/Untitled.gif)
+And here is a gif of the interactive element:
+
+![Interactive](./images/details.gif)
 
 ## Conclusion
 
 You've just built your first HTML website! You can keep adding more and more elements to your website to make it more and more interesting. Here are some ideas:
 
-- Add a form
 - Add a video
 - Change the styling (fonts, colors, background, etc.)
+- Add a form
 
 Hope you had fun! See you next time!
 
